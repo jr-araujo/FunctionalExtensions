@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Description;
+using SEC.WebAPI;
 using Swashbuckle.Application;
 using Swashbuckle.Swagger;
 using WebActivatorEx;
-using SEC.WebAPI;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
