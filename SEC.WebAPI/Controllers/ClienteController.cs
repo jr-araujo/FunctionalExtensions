@@ -1,10 +1,10 @@
-﻿using JRA.FunctionalExtensions;
+﻿using System;
+using System.Net.Http;
+using System.Web.Http;
+using JRA.FunctionalExtensions;
 using SEC.Cadastro;
 using SEC.NucleoCompartilhado;
 using SEC.WebAPI.Models;
-using System;
-using System.Net.Http;
-using System.Web.Http;
 
 namespace SEC.WebAPI.Controllers
 {
@@ -19,7 +19,7 @@ namespace SEC.WebAPI.Controllers
                 viewModel.Cidade, viewModel.Estado, viewModel.Cep);
             var cpfCliente = Cpf.Criar(viewModel.Cpf);
 
-            var telefoneResidencialCliente = Telefone.Criar(viewModel.DDDTelefoneResidencial, 
+            var telefoneResidencialCliente = Telefone.Criar(viewModel.DDDTelefoneResidencial,
                 viewModel.TelefoneResidencial);
             var celularCliente = Telefone.Criar(viewModel.DDDCelular, viewModel.Celular);
             var telefoneComercial = Telefone.Criar(viewModel.DDDTelefoneResidencial,
